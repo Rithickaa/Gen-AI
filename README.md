@@ -1,5 +1,10 @@
-This Python code generates a creative short story based on a sequence of emojis using the GPT-2 model from Hugging Face's Transformers library. It first installs the required library and imports the necessary modules. The GPT-2 model is loaded using the pipeline function for text generation. A seed is set for reproducibility so the output remains consistent.
+Emoji to Story Generator
 
-A function named emoji_to_story is defined, which takes emoji input and prepares a prompt that asks GPT-2 to generate a fun and imaginative story starting with "Once upon a time". The generator function uses sampling parameters like temperature, top-k, and top-p to make the story diverse and creative. It also ensures that the generated text is not too long and ends properly using the EOS token.
+This Python code turns a sequence of emojis into a fun short story using the GPT-2 model from Hugging Face. It installs the needed library, loads the GPT-2 model for text generation, and sets a seed so the output stays the same each time.
+The emoji_to_story function takes emojis, creates a story prompt starting with “Once upon a time,” and uses the model to generate a creative story. It uses settings like temperature and top-k to make the story interesting and not too long.
 
-After generating the story, the prompt part is removed to show only the story content. The code then sets a specific emoji input, calls the function, and prints both the emoji input and the generated story output in a readable format.
+Finally, the prompt is removed from the result, and the code prints both the emoji input and the story in a clear format.
+
+
+Image to text generator
+This Python code generates image captions using a pre-trained Vision-Encoder-Decoder model (nlpconnect/vit-gpt2-image-captioning) from Hugging Face. It loads the model, processor, and tokenizer, then defines a generate_caption function that processes an image, generates a short caption, and displays the image with its caption. The code fetches an online image, saves it, and passes it to the function to demonstrate automatic image-to-text generation.
